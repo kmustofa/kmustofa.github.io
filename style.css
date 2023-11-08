@@ -1,0 +1,22 @@
+.jumbotron {
+  background-color: #fed192;
+  margin-bottom: -1rem;
+}
+
+#project {
+  overflow: hidden;
+  padding-top: 4rem;
+}
+
+#about {
+  background: linear-gradient(to left, #ef910f, #fff 98%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  overflow: hidden;
+}
+
+#contact {
+  background: linear-gradient(to top, #fff 30%, #ef910f);
+  overflow: hidden;
+}
