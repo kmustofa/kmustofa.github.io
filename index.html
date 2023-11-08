@@ -162,18 +162,18 @@
         </div>
         <div class="row justify-content-center">
           <div class="col col-md-7 col-sm-10 col-10">
-            <form>
+            <form name="contact-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="text" class="form-control" id="email" aria-describedby="email" />
+                <input type="text" class="form-control" id="email" aria-describedby="email" name="email" />
               </div>
               <div class="mb-3">
                 <label for="Pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="Pesan" rows="3"></textarea>
+                <textarea class="form-control" id="Pesan" rows="3" name="pesan"></textarea>
               </div>
 
               <button type="submit" class="btn btn-warning">Kirim</button>
@@ -264,6 +264,17 @@
         contact.addEventListener("click", function () {
           offcanvas.hide(); // Menutup offcanvas
         });
+      });
+    </script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxclN0wJy9dKDZdDc3Iwh8IcccInuCznTor3nT2-rCBCLkYYUNbWICH_tak88ca6DoT/exec";
+      const form = document.forms["contact-form"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
       });
     </script>
   </body>
