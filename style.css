@@ -1,11 +1,15 @@
 .jumbotron {
   background-color: #fed192;
-  margin-bottom: -1rem;
+  margin-bottom: -3rem;
+}
+.jumbotron .lead {
+  padding-bottom: 5rem;
 }
 
 #project {
   overflow: hidden;
   padding-top: 4rem;
+  margin-top: -1rem;
 }
 
 #about {
@@ -14,9 +18,14 @@
   background-repeat: no-repeat;
   background-position: fixed;
   overflow: hidden;
+  margin-top: -5rem;
 }
 
 #contact {
   background: linear-gradient(to top, #fff 30%, #ef910f);
   overflow: hidden;
+}
+
+footer {
+  margin-top: -0.5rem;
 }
